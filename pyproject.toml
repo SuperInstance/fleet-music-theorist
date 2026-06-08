@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "si-fleet-music-theorist"
+version = "0.1.0"
+description = "MIDI file theory analysis: key, parts, intervals, motion characterization"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = [
+    "music21>=9.0",
+]
+
+[project.scripts]
+fleet-theorist = "lib.theorist:main"
+
+[tool.setuptools.packages.find]
+include = ["lib*"]
